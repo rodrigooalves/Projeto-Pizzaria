@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pedido.css" />
+    <title>Pedido</title>
+</head>
+<body>
+    <header class="header-principal">
+        <div class="wrapper header-wrapper">
+            <div class="nav-brand">
+                <img src="./assets/pizza (1).png" alt="banner da pizzaria" />
+                <h1>Pizzaria da gatinha</h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="./index.html#cardapio">Cardápio</a>
+                    </li>
+                    <li>
+                        <a href="./index.html#contato">Contato</a>
+                    </li>
+                    <li>
+                        <a href="#">Pedido</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form id="form_pedido">
+            <div>
+                <div class="infos_cliente">
+                    <div>
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" placeholder="Digite seu nome..." />
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" type="text" placeholder="Digite seu telefone..." />
+                    </div>
+                    <div>
+                        <label for="endereco">Endereço</label>
+                        <input id="endereco" type="text" placeholder="Digite seu endereço..." />
+                    </div>
+                </div>
+                <div class="infos_pedido">
+                    <div>
+                        <label for="sabor_pizza">Selecione o sabor da pizza</label>
+                        <select id="sabor_pizza">
+                            <option value="">Selecione</option>
+                            <option value="1">Peperonni</option>
+                            <option value="2">Calabresa</option>
+                            <option value="3">Marguerita</option>
+                            <option value="4">Bacon</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Selecione o tamanho</span>
+                        <label>
+                            P
+                            <input type="radio" value="p" name="tamanho_pizza" />
+                        </label>
+                        <label>
+                            M
+                            <input type="radio" value="m" name="tamanho_pizza" />
+                        </label>
+                        <label>
+                            G
+                            <input type="radio" value="g" name="tamanho_pizza" />
+                        </label>
+                        <label>
+                            F
+                            <input type="radio" value="f" name="tamanho_pizza" />
+                        </label>
+                    </div>
+                    <div>
+                        <span>Condimentos?</span>
+                        <label>
+                            Ketchup
+                            <input type="checkbox" value="ketchup" name="condimentos" />
+                        </label>
+                        <label>
+                            Maionese
+                            <input type="checkbox" value="maionese" name="condimentos" />
+                        </label>
+                        <label>
+                            Mostarda
+                            <input type="checkbox" value="mostarda" name="condimentos"  />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button>Fazer pedido</button>
+        </form>
+
+        <a href="./lista-pedidos.html">ver pedidos</a>
+        <!-- 
+            Adicionar os valores do pedido na tabela
+            toda vez que o usuario criar um novo pedido,
+            lembre de criar os elementos no javascript
+            e jogar na tabela na ordem
+         -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Id do pedido</th>
+                    <th>Nome do cliente</th>
+                    <th>Telefone</th>
+                    <th>Endereço</th>
+                    <th>Sabor da pizza</th>
+                    <th>Tamanho da pizza</th>
+                    <th>Condimentos</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

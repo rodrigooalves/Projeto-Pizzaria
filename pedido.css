@@ -1,0 +1,141 @@
+:root {
+    /* representa o elemento raiz do projeto, no caso, a tag html */
+    
+    /* calcula a base para 10px do tamanho de fonte já que ele capta o 
+    font-size do navegador e a base é 16px */
+    font-size: 62.5%;
+
+    /* o comportamento do scroll fica suave */
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header-principal {
+    background-color: rgb(255, 185, 99);
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+@media(min-width: 870px) {
+    .header-wrapper {
+        flex-direction: row;
+    }
+}
+
+/* seletor de filhos diretos, só pega
+tags que sejam filhas diretas do elemento */
+.header-principal .nav-brand {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header-principal .nav-brand > img {
+    width: 5rem;
+}
+
+.header-principal nav ul {
+    font-size: 2rem;
+    list-style: none;
+    display: flex;
+}
+
+.header-principal nav li {
+    padding: 0.5rem 2rem;
+}
+
+.header-principal nav li:not(:first-of-type) {
+    border-left: 1px solid black;
+}
+
+.header-principal nav a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.header-principal nav a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: black;
+    transition: 0.4s;
+}
+
+.header-principal nav a:hover::after {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form_pedido {
+    max-width: 55rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 1px solid gray;
+    margin: 4rem;
+    padding: 2rem;
+}
+
+#form_pedido > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#form_pedido > div .infos_cliente, 
+#form_pedido > div .infos_pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#form_pedido > div .infos_cliente label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#form_pedido > div .infos_cliente input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem
+}
+
+#form_pedido > div .infos_pedido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
+}
